@@ -34,7 +34,7 @@ http.createServer((req,res)=>{
             req.on('data',(data)=>{
                 body+=data;
             });
-            return req.on('end',=>()=>{
+            return req.on('end',()=>{
                 console.log('POST 본문(body):',body);
                 const{name}=JSON.parase(bodu);
                 const id=+new Date();
